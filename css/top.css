@@ -1,0 +1,42 @@
+html{
+    scroll-behavior: smooth;/* ページ内リンクを押した時、スムーズに画面をスクロールする */
+}
+
+.topbtn{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    opacity: 0;/* サイトが読み込まれた瞬間、一瞬画面にボタンが出てきてしまう現象を防ぐため */
+    z-index: 10000;
+    transition: all 0.5s linear;
+}
+
+.topbtn a{
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    /* border-radius: 50%; */
+}
+
+/* section{
+    width: 100%;
+    height: 100vh;
+} */
+
+/* 2023年から追加されたnth-childの記述方法なので、vsCord上ではエラーとして扱われるが、ちゃんと効く（2023年6月現在）*/
+:nth-child(1 of section){
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+:nth-child(2 of section){
+    background-color:grey;
+}

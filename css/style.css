@@ -1,0 +1,401 @@
+@charset "utf-8";
+
+:root{
+    --bgColor01:rgb(74, 185, 108);
+    /* --bgColor02_all:rgb(177, 241, 196); */
+    --bgColor02_all:#bfffd3;
+    --bgColor03_con:aliceblue;
+    --bgColor05_prof:none;
+    --profBorder:3px;
+    --profLong:30%;
+    --profColor:rgb(255, 156, 42);
+    --leafColor: rgb(4, 82, 82);
+    --max_height_con:500px;
+    --min_height_con:300px;
+}
+html{
+    font-size:100%;
+}
+body{
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    background-color: var(--bgColor02_all);
+}
+img{
+    width:100%;
+    height: 100%;
+}
+
+/* *******header******************* */
+.headerWrap{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 0 auto;
+    color: var(--leafColor);
+    font-weight: 500;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+/* *******main******************* */
+.mainWrap .mainV{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    justify-content: center;
+    align-items: center;
+}
+/* 大きい葉っぱ */
+.mainWrap .mainV .leaf01{
+    background-color: var(--leafColor);
+    width: 30%;
+    min-width: 220px;
+    height: 35%;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100% 0 100% 0;
+}
+.mainWrap .mainV .leaf01:hover{
+    background-color: var(--bgColor01);
+    border-radius: 0 100% 0 100%
+}
+
+.mainWrap .mainV h2 .title{
+    display: block;
+    font-size: 3.2rem;
+    color: var(--bgColor03_con);
+}
+
+/* メニュー */
+.mainWrap .mainV nav ul{
+    display: flex;
+    gap: 5rem;
+    color: var(--leafColor);
+    font-weight: 900;
+
+    font-size: 1.3rem;
+}
+.mainWrap .mainV nav ul li:hover{
+    color: var(--bgColor01);
+}
+.mainMenu{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+}
+
+
+/* 各コンテンツの背景 */
+.mainWrap .mainMenu #about,
+.mainWrap .mainMenu #works,
+.mainWrap .mainMenu #askme{
+    background-color:var(--bgColor03_con); 
+    max-height: var(--height_con);
+    min-height: var(--min_height_con);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.8rem;
+    padding: 2rem 2rem 3rem;
+    margin: auto 0;
+}
+/* 各コンテンツの葉っぱ調整 */
+.mainWrap .mainMenu #about h2,
+/* .mainWrap .mainMenu #works h2, */
+.mainWrap .mainMenu #works .works_h2,
+.mainWrap .mainMenu #askme h2{
+    width: 6rem;
+    height: 3rem;
+    background-color: var(--leafColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bgColor03_con);
+    font-weight: 700;
+}
+
+
+/* -----about----- */
+.mainWrap .mainMenu #about .about_contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    /* flex-wrap: wrap; */
+    color: var(--leafColor);
+    font-weight: 500;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof{
+    /* width:200px;
+    height:200px; */
+    width:150px;
+    height:150px;
+    background-color: var(--bgColor02_all);
+    border: 3px solid var(--leafColor);
+    position: relative;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic01{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-50%,-120%) rotate(-45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic02{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-15%,-110%) rotate(-15deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic03{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(10%,-85%) rotate(15deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+ .mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic04{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(20%,-50%) rotate(45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic05{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(10%,-15%) rotate(75deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic06{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-15%,10%) rotate(105deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic07{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-50%,20%) rotate(135deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic08{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-85%,10%) rotate(165deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic09{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-110%,-15%) rotate(195deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic10{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-120%,-50%) rotate(225deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic11{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color:var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-110%,-85%) rotate(255deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.mainWrap .mainMenu #about .about_contents .about_pic_prof .about_pic12{
+    width:var(--profLong);
+    height:var(--profLong);
+    background-color: var(--bgColor05_prof);
+    border: var(--profBorder) solid var(--profColor);
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: translate(-85%,-110%) rotate(285deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.mainWrap .mainMenu #about .about_contents .about_name_prof{
+    max-width: 550px;
+}
+
+.mainWrap .mainMenu #about .about_contents .about_name_prof p{
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+.mainWrap .mainMenu #about .about_contents .about_name_prof .name{
+    font-size: 1.1rem;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    background-color: var(--leafColor);
+    color: var(--bgColor03_con);
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* -----works----- */
+.mainWrap .mainMenu #works .modal-title{
+    font-size: 1rem;
+    font-weight: 800;
+    /* color: var(--leafColor); */
+    text-align: center;
+    padding-bottom: 1rem;
+    /* text-decoration: underline; */
+    /* text-decoration-color: var(--leafColor); */      
+}
+.mainWrap .mainMenu #works .modal-text{
+    padding-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mainWrap #works h3{
+    font-size: 1.1rem;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    background-color: var(--leafColor);
+    color: var(--bgColor03_con);
+    padding: 0.7rem;
+    margin-bottom: 1.3rem;
+}
+
+.mainWrap #works ul li{
+    margin: 0 auto;
+}
+.mainWrap #works .works_contents{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    /* flex-wrap: wrap; */
+    padding: 0 3rem;
+    justify-content: center;
+}
+/* @media (max-width: 630px){
+    .mainWrap #works .works_contents{
+        justify-content: flex-start;
+    }
+} */
+.mainWrap #works .works_contents ul{
+    display: flex;
+    gap: 3.5rem;
+    flex-wrap: wrap;
+}
+.mainWrap #works .works_contents li{
+    max-width: 200px;
+    max-height: 200px;
+}
+.mainWrap #works .works_contents .web01{
+    width: 150px;
+    height: 150px;
+}
+.mainWrap #works .works_contents .modal-image{
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+.mainWrap #works .works_contents #modal_web01 .modal-image{
+    min-width: 80%;
+    height: 100%;
+}
+
+/* -----askme----- */
+.mainWrap #askme .askme_contents{
+    width:100%;
+}
+.mainWrap #askme .askme_contents iframe{
+    width:100%;
+}
+
+
+
+/* *******footer******************* */
+.footerWrap{
+    width: 100%;
+    height: 7rem;
+    background-color:var(--leafColor);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10rem;
+}
+.footerWrap small{
+    color:  var(--bgColor02_all);
+    padding: 1rem;
+}
